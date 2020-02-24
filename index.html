@@ -19,12 +19,13 @@
 <img id="image">
 
 </img>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 
     function createADialog() {
         alert("hello");
-        document.getElementById("imagePick").innerHTML += "<input type='file' style='display:none; width: 100px; height: 50px;' id='" + 'name' + "'/>"
+        document.getElementById("imagePick").innerHTML += "<input type='file' style='display:none; width: 100px; height: 50px;' id='" + 'pickImage' + "'/>";
+        $("input").trigger('click');
     }
     function pickImage($imageId){
         //$(window).trigger('native.camera');
