@@ -11,7 +11,8 @@
 
 <button onclick="myFunction()">Click me</button>
 
-<button id="imagePick" onclick="createADialog('camera')">Pick Image</button>
+<button  onclick="createADialog()">Pick Image</button>
+<p id="imagePick"></p>
 
 <p id="demo"></p>
 
@@ -21,8 +22,9 @@
 
 <script>
 
-    function createADialog(name) {
-        document.getElementById("imagePick").innerHtml += "<input type='file' style='display:none' id='" + name + "'/>"
+    function createADialog() {
+        // alert("hello");
+        document.getElementById("imagePick").innerHTML += "<input type='file' style='display:none; width: 100px; height: 50px;' id='" + 'name' + "'/>"
     }
     function pickImage($imageId){
         //$(window).trigger('native.camera');
