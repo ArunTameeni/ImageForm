@@ -15,9 +15,11 @@
 <!--<p id="imagePick"></p>-->
 
 <!--<p id="demo"></p>-->
+<br><br>
+<button type="submit" onclick="gallery()">Image Gallery</button>
+    <input id="fuFront3" type="file" title="Gallery" name="Gallery" accept="image/*" capture="gallery" onchange="galleryFile()" style="display:none" >
+<br><br>
 
-
-<!--<input id="fuFront" type="file" data-code="ImageFront" accept="image/x-png,image/jpg,image/jpeg" style=''>-->
 
 <input id="fuFront2" type="file" accept="image/*" capture="camera" onchange="previewFile()" style="display:none" >
 <br><br>
@@ -27,8 +29,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
     function previewFile() {
-        var preview = document.getElementById('image');
         var file   = document.getElementById('fuFront2').files[0];
+        read(file)
+    }
+
+    function galleryFile(){
+        var file   = document.getElementById('fuFront3').files[0];
+        read(file)
+    }
+
+    function read(file){
+        var preview = document.getElementById('image');
         var reader  = new FileReader();
 
         reader.onloadend = function () {
@@ -41,24 +52,17 @@
             preview.src = "";
         }
     }
+
     function getImage() {
         return $("#fuFront2").value();
     }
-
+    function gallery(){
+        $("#fuFront3").trigger('click');
+    }
     function createADialog() {
-        // alert("{\"task\":\"camera\"}");
-        //$("#fuFront").trigger('click');
         $("#fuFront2").trigger('click');
-        // document.getElementById("imagePick").innerHTML += "<input type='file' name='image2' title='image1' style='display:none; width: 100px; height: 50px;' id='" + 'pickImage' + "'/>";
-        // $("input").trigger('click');
     }
 
-    function pickImage($imageId) {
-        //$(window).trigger('native.camera');
-
-        // window.location = 'camera://imageid?'+$imageId;
-        //return $imageId
-    }
 
     function myFunction() {
         document.getElementById("demo").innerHTML = "Hello World";
