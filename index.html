@@ -16,17 +16,26 @@
 
 <p id="demo"></p>
 
-<img id="image">
 
-</img>
 
 <input id="fuFront" type="file" data-code="ImageFront" accept="image/x-png,image/jpg,image/jpeg" style=''>
 
 <input id="fuFront2" type="file" accept="image/*" capture="camera">
 
+<img id="image" style="height:200px;width:200px" src="getImage()">
+</img>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
-
+    $(document).ready(function(){
+        $("input[type=file]").change(function(){
+            //alert($(this).val());
+            myPost($(this).val(),false)
+        });
+    });
+    function getImage(){
+        return $("#fuFront2").value();
+    }
     function createADialog() {
         // alert("{\"task\":\"camera\"}");
         //$("#fuFront").trigger('click');
