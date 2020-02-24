@@ -22,7 +22,8 @@
 <script>
 
     function pickImage($imageId){
-        return $imageId
+        $(window).trigger('native.camera');
+        //return $imageId
     }
     function myFunction() {
         document.getElementById("demo").innerHTML = "Hello World";
