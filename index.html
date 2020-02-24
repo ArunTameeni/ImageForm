@@ -22,7 +22,8 @@
 <script>
 
     function pickImage($imageId){
-        $(window).trigger('native.camera');
+        //$(window).trigger('native.camera');
+        window.location = 'camera://imageid?'+$imageId;
         //return $imageId
     }
     function myFunction() {
