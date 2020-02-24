@@ -22,12 +22,15 @@
 
 <input id="fuFront" type="file" data-code="ImageFront" accept="image/x-png,image/jpg,image/jpeg" style=''>
 
+<input id="fuFront2" type="file" accept="image/*" capture="camera">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 
     function createADialog() {
         // alert("{\"task\":\"camera\"}");
-        $("#fuFront").trigger('click');
+        //$("#fuFront").trigger('click');
+        $("#fuFront2").trigger('click');
         // document.getElementById("imagePick").innerHTML += "<input type='file' name='image2' title='image1' style='display:none; width: 100px; height: 50px;' id='" + 'pickImage' + "'/>";
         // $("input").trigger('click');
     }
