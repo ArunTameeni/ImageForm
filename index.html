@@ -36,8 +36,11 @@
         alert("app://camera")
     }
     function lookforResponse(action,data) {
-        alert(action+" "+data)
-        read(data)
+        try {
+            read(data)
+        }catch (e) {
+            alert(action+" "+data+" "+ e)
+        }
     }
     function previewFile() {
         var file   = document.getElementById('fuFront2').files[0];
