@@ -11,6 +11,10 @@
 
 <!--<button onclick="myFunction()">Click me</button>-->
 
+<button type="submit" onclick="alertAction()">Camera Alert</button>
+
+<br><br>
+
 <button type="submit" onclick="createADialog()">Capture Image</button>
 <!--<p id="imagePick"></p>-->
 
@@ -28,6 +32,12 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
+    function alertAction(){
+        alert("app://camera")
+    }
+    function lookforResponse(action,data) {
+        alert(action+" "+data)
+    }
     function previewFile() {
         var file   = document.getElementById('fuFront2').files[0];
         read(file)
