@@ -37,7 +37,7 @@
     }
     function lookforResponse(action,data) {
         try {
-            read(data)
+            readbas64(data)
         }catch (e) {
             alert(action+" # "+data+" "+ e)
         }
@@ -51,7 +51,10 @@
         var file   = document.getElementById('fuFront3').files[0];
         read(file)
     }
-
+    function readbas64(file){
+        var preview = document.getElementById('image');
+        preview.src = file;
+    }
     function read(file){
         var preview = document.getElementById('image');
         var reader  = new FileReader();
