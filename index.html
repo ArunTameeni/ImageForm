@@ -10,6 +10,10 @@
 <p>Click the Capture Image button to take a new picture.</p>
 
 <!--<button onclick="myFunction()">Click me</button>-->
+<button type="submit" onclick="userAgent()">Token</button>
+<br>
+<p id="userAgent"></p>
+<br><br>
 
 <button type="submit" onclick="alertAction()">Camera Alert</button>
 
@@ -32,6 +36,10 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
+    function userAgent(){
+        var x = "User-agent header sent: " + navigator.userAgent;
+        document.getElementById("userAgent").innerHTML = x;
+    }
     function alertAction(){
         alert("app://both") //camera //gallery
     }
