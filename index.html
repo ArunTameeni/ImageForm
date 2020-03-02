@@ -46,7 +46,7 @@
             document.getElementById('fc_frame').style.visibility = 'visible';
             // alert("fresh");
             try{
-                console.log(window.fcWidget);
+                // console.log("fc",window.fcWidget.open());
                 window.fcWidget.open();
             }catch (e) {
                 alert("err: "+e)
@@ -67,8 +67,8 @@
 <div id="custom_fc_button" style="visibility: visible;">
     <a id="open_fc_widget" onclick="openWidget()" style="cursor:pointer;"><img id="imageicon" src="https://s3-eu-west-1.amazonaws.com/tameeni/cdn/content/Theme2.0/images/chat-icon.png" alt="تواصل مع تأميني"></a>
 </div>
-
-<div id="fc_frame" class="fc_frame fc_dn fc-widget-normal" >
+<iframe id="fc_push" src="https://76674705653769.webpush.freshchat.com/index.html?ref=aHR0cDovL2xvY2FsaG9zdDo2MzM0Mw==" frameborder="0"></iframe>
+<div id="fc_frame" class="fc_frame fc_dn fc-widget-normal h-open-container fc_open" >
 
 </div>
 </body>
