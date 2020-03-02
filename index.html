@@ -44,7 +44,12 @@
     <script type="text/javascript">
         var openWidget = function () {
             document.getElementById('fc_frame').style.visibility = 'visible';
-            window.fcWidget.open();
+            alert("fresh");
+            try{
+                window.fcWidget.open();
+            }catch (e) {
+                alert("err: "+e)
+            }
         };
     </script>
 
