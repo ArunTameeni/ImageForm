@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<head>
+</head>
+<body>
+<div class="modal fade common-popup-box">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" id="declaration-content">
+            <div class="common-popup">
+                <div class="clearfix">
+                    <div class="contactus-submit-popup">
+                        <div id="common-popup">
+                            <div class="popupmessage-box">
+                                <div class="modal-body">
+                                    <div class="popup-content-box">
+                                        <div class="popup-title">
+                                           Enter SMScode
+                                        </div>
+                                        <div class="popup-message">
+                                            <div id="SMSSuccessMessage" class="error-message success" style="display:none">
+                                            </div>
+                                            <div class="validation-summary-errors" id="SMSErrorMessage" style="display:none">
+                                            </div>
+                                            <p id="SendSMSCodeMessage"></p>
+                                            <div class="loginform">
+                                                <div class="form-row">
+                                                    <div class="row clearfix">
+                                                        <div class="col-sm-12">
+                                                            <div class="login-input verifypopup-input">
+                                                                <input type="tel" id="VerifySMSCode" maxlength="4" onkeypress="return isNumberKey(event);" oncopy="return false;" onpaste="return false;" oncut="return false;" ondragstart="return false;" ondrop="return false;" autocomplete="one-time-code" />
+                                                            </div>
+                                                            <br>
+                                                            <div class="payment-successful-buttons popupbutton-center verifypopup-button">
+                                                                <button title="Verify" type="button" id="btnVerifySMS" class="yellow-btn" data-size="s" data-style="zoom-in">
+                                                                   Verify
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="clearfix">
+                                                <div class="col-sm-12">
+                                                    <div class="form-row">
+                                                        <div class="input-box">
+                                                            <div class="row clearfix">
+                                                                <div class="col-sm-12">
+                                                                </div>
+                                                            </div>
+                                                            <br>
+                                                            <div class="row clearfix">
+                                                                <div class="col-sm-12">
+                                                                    <div class="resend-text">
+
+                                                                        <div class="time-section">
+                                                                            <div class="time-countdown-box clearfix">
+                                                                                <div class="time-counter">
+                                                                                    <div id="displayTimer"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="clearfix">
+                                                                <div class="payment-successful-buttons popupbutton-bottompart">
+                                                                    <button title="resend" type="button" id="btnResendSMS" class="grey-btn" data-size="s" data-style="zoom-in">
+                                                                      resend
+                                                                    </button>
+                                                                    <button style="display:none" title="Cancel" id="btnCancleSMS" class="yellow-btn" data-dismiss="modal" aria-label="Close">
+                                                                        Cancel
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
