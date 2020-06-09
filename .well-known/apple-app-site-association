@@ -2,12 +2,18 @@
     "applinks": {
         "apps": [],
         "details": [{
-            "appID": "NQKD5B7Z46.Tameeni.com",
+            "appIDs": ["NQKD5B7Z46.Tameeni.com"]
             "paths": ["/ImageForm/*"]
             },
             {
-            "appID": "NQKD5B7Z46.Tameeni.com",
-            "paths": ["/ImageForm/videos"]
+            "components":[
+                {
+                    "/" : "/ImageForm/*"
+                },
+                {
+                    "/" : "*"
+                }
+            ]
         }]
     }
 }
